@@ -1,7 +1,9 @@
-terraform {
-  backend "gcs" {
-    credentials = "path for json key"
-    bucket = "prashant-state-bucket"
-    prefix = "terraform/state"
+resource "google_storage_bucket" "default" {
+  name          = "bucket-tfstate"
+  force_destroy = false
+  location      = "us-central1"
+  storage_class = "STANDARD"
+  versioning {
+    enabled = true
   }
 }
