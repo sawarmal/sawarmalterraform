@@ -1,0 +1,7 @@
+project_id = "q-gcp-7959-genesysstaff-22-06"
+gh_token = "youe github token"
+service_account = "genesys-github-workflows@q-gcp-7959-genesysstaff-22-06.iam.gserviceaccount.com"
+repo_url = "https://github.com/qprashantkhapekar/demo-poc-"
+repo_name = "demo-poc-"
+repo_owner = "qprashantkhapekar"
+region     = "us-central1"
