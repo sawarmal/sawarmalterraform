@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    credentials = "path for json key"
+    credentials = "secrets.prashant_creds"
     bucket = "prashant-state-bucket"
     prefix = "terraform/state"
   }
