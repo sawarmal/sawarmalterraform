@@ -51,6 +51,7 @@ jobs:
         GOOGLE_CREDENTIALS: ${{ secrets.prashant_creds }}
 
   kubernetes:
+    needs: terraform
     runs-on: 'ubuntu-latest'
     steps:
       - name: 'Checkout Repository'
