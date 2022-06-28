@@ -30,7 +30,7 @@ jobs:
     - name: Terraform Init
       run: terraform init
       env:
-        GOOGLE_CREDENTIALS: ${{ secrets.PRASHANT_CREDS }}
+        GOOGLE_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
 
     # Checks that all Terraform configuration files adhere to a canonical format
     #- name: Terraform Format
@@ -40,7 +40,7 @@ jobs:
     - name: Terraform Plan
       run: terraform plan
       env:
-        GOOGLE_CREDENTIALS: ${{ secrets.PRASHANT_CREDS }}
+        GOOGLE_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
 
       # On push to main, build or change infrastructure according to Terraform configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
@@ -48,7 +48,7 @@ jobs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve
       env:
-        GOOGLE_CREDENTIALS: ${{ secrets.PRASHANT_CREDS }}
+        GOOGLE_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
 
   kubernetes:
     needs: terraform
@@ -60,7 +60,7 @@ jobs:
       - id: 'auth'
         uses: 'google-github-actions/auth@v0'
         with:
-          credentials_json: '${{ secrets.PRASHANT_CREDS }}'
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v0'
@@ -70,8 +70,8 @@ jobs:
 
       - name: authenticating into cluster
         run: |
-          gcloud config set project prashant-terraform
-          gcloud container clusters get-credentials prashant-gke --region=us-central1-a
+          gcloud config set project august-shield-345908
+          gcloud container clusters get-credentials gke-cluster --region=us-central1-c
   
       - name: setup Helm3
         run: |
