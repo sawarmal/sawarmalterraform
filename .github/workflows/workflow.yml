@@ -84,4 +84,4 @@ jobs:
         run: |
           #helm upgrade prashanthelmchart ./prashant-helm/prashant-helm-chart
           #helm install prashanthelmchart ./prashant-helm/prashant-helm-chart
-          helm create prashanthelmchart ./prashant-helm/prashant-helm-chart
+          helm create sawarmalhelm ./prashant-helm/prashant-helm-chart
