@@ -1,40 +1,85 @@
-name: Build and Deploy to GKE
+name: 'Terraform CI , build gke-cluster and buiild and deploy helm-chart to gke'
 
-on: 
+on:
   push:
-    branches: 
-    - 'main'
+    branches:
+    - main
+  pull_request:
 
-kubernetes:
-  runs-on: 'ubuntu-latest'
-   steps:
-   - name: 'Checkout Repository'
-     uses: 'actions/checkout@v2'
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
 
-   - id: 'auth'
-     uses: 'google-github-actions/auth@v0'
-     with:
-       credentials_json: '${{ secrets.prashant_creds }}'
+    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    defaults:
+      run:
+        shell: bash
 
-   - name: 'Set up Cloud SDK'
-       uses: 'google-github-actions/setup-gcloud@v0'
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v2
 
-   - name: 'Use gcloud CLI for authenticating gke-cluster'
+    # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+
+
+    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+    - name: Terraform Init
+      run: terraform init
+      env:
+        GOOGLE_CREDENTIALS: ${{ secrets.prashant-creds }}
+
+    # Checks that all Terraform configuration files adhere to a canonical format
+    - name: Terraform Format
+      run: terraform fmt -check
+
+    # Generates an execution plan for Terraform
+    - name: Terraform Plan
+      run: terraform plan
+      env:
+        GOOGLE_CREDENTIALS: ${{ secrets.prashant-creds }}
+
+      # On push to main, build or change infrastructure according to Terraform configuration files
+      # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
+    - name: Terraform Apply
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      run: terraform apply -auto-approve
+      env:
+        GOOGLE_CREDENTIALS: ${{ secrets.prashant-creds }}
+
+  kubernetes:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'Checkout Repository'
+        uses: 'actions/checkout@v2'
+
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v0'
+        with:
+          credentials_json: '${{ secrets.prashant_creds }}'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v0'
+
+      - name: 'Use gcloud CLI'
         run: 'gcloud info'
 
-   - name: authenticating into cluster
+      - name: authenticating into cluster
         run: |
           gcloud config set project prashant-terraform
           gcloud container clusters get-credentials prashant-gke --region=us-central1-a
   
-   - name: setup Helm
+      - name: setup Helm3
         run: |
           curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
           chmod 700 get_helm.sh
           ./get_helm.sh
           helm plugin install https://github.com/databus23/helm-diff
       
-   - name: helm mychart
+      - name: helm mychart
         run: |
           #helm upgrade prashanthelmchart ./prashant-helm/prashant-helm-chart
           #helm install prashanthelmchart ./prashant-helm/prashant-helm-chart
