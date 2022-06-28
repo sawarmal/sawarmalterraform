@@ -70,7 +70,7 @@ jobs:
       - name: authenticating into cluster
         run: |
           gcloud config set project prashant-terraform
-          gcloud container clusters get-credentials prashant-gke --region=us-central1-a
+          gcloud container clusters GOOGLE_CREDENTIALS: ${{ secrets.prashant-creds }} prashant-gke --region=us-central1-a
   
       - name: setup Helm3
         run: |
