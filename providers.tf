@@ -1,7 +1,7 @@
 provider "google" {
   project = var.project_id
   region  = var.region
-  credentials = var.service_account
+  credentials = var.credentials
 }
 
 terraform {
@@ -12,7 +12,7 @@ terraform {
 }
 
 provider "google-beta" {
-  credentials = var.service_account
+  credentials = var.credentials
   project     = var.project_id
   region      = var.region
 }
