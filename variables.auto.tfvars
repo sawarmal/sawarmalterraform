@@ -1,4 +1,4 @@
-credentials        = "https://github.com/psk24091988/prashant-demo/PRASHANT_CREDS = ${{ secrets.PRASHANT_CREDS }}"
+credentials        = "${{ secrets.PRASHANT_CREDS }}"
 project_id         = "prashant-terraform"
 region             = "us-central1"
 zones              = ["<region>-a", "<region>-b", "<region>-c"]
@@ -13,4 +13,3 @@ gh_token = "https://github.com/psk24091988/prashant-demo/${{ secrets.PRASHANT_CR
 repo_url = "https://github.com/psk24091988/prashant-demo"
 repo_name = "prashant-demo"
 repo_owner = "psk24091988"
-region     = "us-central1"
