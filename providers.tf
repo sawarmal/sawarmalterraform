@@ -2,7 +2,7 @@ provider "google" {
   project = var.project_id
   region  = var.region
   version     = "3.84.0"
-  credentials = "${file(var.prashant_creds)}"
+  credentials = "${file(var.PRASHANT_CREDS)}"
 }
 
 terraform {
@@ -14,7 +14,7 @@ terraform {
 
 provider "google-beta" {
   version     = "3.84.0"
-  credentials = "${file(var.prashant_creds)}"
+  credentials = "${file(var.PRASHANT_CREDS)}"
   project     = var.project_id
   region      = var.region
 }
