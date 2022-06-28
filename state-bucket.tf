@@ -1,4 +1,4 @@
-resource "google_storage_bucket" "terra-state-buck" {
+resource "google_storage_bucket" "prashant-terra-buck" {
   force_destroy = true
   service_account = var.service_account
   location      = var.region
