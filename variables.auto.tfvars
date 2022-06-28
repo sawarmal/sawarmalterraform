@@ -1,4 +1,5 @@
 project_id         = "prashant-terraform"
+credentials        = "./prashant-terraform-209ac1c0b8e8.json"
 region             = "us-central1"
 zones              = ["<region>-a", "<region>-b", "<region>-c"]
 name               = "prashant-gke"
