@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "prashant-terraform",
+  "private_key_id": "209ac1c0b8e8f72536ce96e1343f087d3d3b1519",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCkA6mIXIa/aiV0\nlz0iiKSySsTznNQfyR8ioit5JDOmIn2xVq3kCnzD8rKTfKG/aLdWSo3pcITaZFf2\n9Vsj+lBHl65qGdlPpa9QCW3/frhPUYhsYA7oJItPYw770oM831nRk/zHU4OCbs/a\nGfDHzctAonTUvg8/8rJ9yAGmQd1rUzvY9e4PTXe9ue2W9QhT8wyWXbkSWjsVHH53\nR17PoZPVIe4xoP3RAH/7BAq9sHGw5/xg3tezKgIy0lzcwN9f+MopYBMf8/fisdXt\n4RDT5FZvB37KLTHr8SRx40L2GpnTlQzNOztW0QvHBbbzuAkgZUTh6GmKcQGzDb0K\nr1T3OfvPAgMBAAECggEAFEhRqEfM8BHn1N25FTKxr0y4w2mS/+VGwOkuGBqGepaM\nVahi867qU+8I7107wWhpN7Ybi5E7FKjRCfy4ix/y2o+i5YMR0RwrrGmmHTDmCQUL\nql9MqJ+QTL5yxWh4i0gRmu3ClkG5IyGh+ZY4pPTJnFIawY5JY36XXR+lOJKvl4xu\nRsvBhW650S/WwFbkBX4zlM/1bd1v5Bix7nMB+kNs8uzAm7BaxtwZx3btzFTMKMAn\nhuh2csAWftk+jwwm7NwQmnZtkVeZq+L3i+9+08MDdTuIGH4IN/QXpnNaljxMmWxe\nyhbzFCqcnU+YubE9/poswFn8XDTJy52Y51ezlav7RQKBgQDTrCV7xzmVTjeIMjJL\nCbD3ufa5xh62AfMREC+nuRcT1er0m4a5IwosFQsdenCwn4ST4z0YSfrY6sjHq8RR\n0EGtTQ6BoT+gP8noeAIGETeWJirh1fRXsS9MDsh8gyse4NQIr6Sa9pymLrE4L1yg\n63Yc5PipJclxau38/o8/X2mRhQKBgQDGXIqxAhaHrAafchH/HzKNzwINWAznkDKi\nWrpkfoeea5m7XGzaxqrcbsldGvzmVusFFVCWo/+xhRKOeEXKCPrGKwyYqCBCnYgg\nCPDZWYJ25jsAbANiVwy4SwDXPB6A2Rsg0GGaCfMEk6oMaVrVJAue/iEdrjN62kxN\nt/0uvZcuQwKBgQCNq17fDEUfB92k+yusC011T/Kw/cfaO03KstGiaP/oF7mMg3dU\n+/236VGqJiO8Iteh/2oJkqIggmtlMDJSK5d5fORjoF+sSmVBgOih1O4mQV9cDU3f\nT0h/mDlZFJVMsl9XfO8nhDzuALw+BXzyewVva1R+KTs8/LtSI7IOUTaf3QKBgH8n\ntXRQjVa9LKWrPuQXAJYs+/jH18XdBshSdqeTAKbJ/QtA7Tq1HbQehJBdi36wewmQ\nJ0/Zo0ANuN6BNOOVLAQ6dmGpbLynNSqr8JCzs1E6ttnHY8f3W10MH2bZ0AfypFQ9\noENZW2I0sk4wfxygdZ6e82WOVMvNAhrT9cWvnSj3AoGBALzwKv5rIeuAHOn3Gxv9\ntrVKo0IJ4Xz3Trcj6pcIC4TTO9UXYD4oFDa/lDp1OhMy17+SAqdXpGqVixLKB/HD\nikkwvuNtu6nrYIcdA8XdmqjvaT8von+veXzIMVA211b57vvL5VYcRdkdQRJp4KJB\nCUiH1lLnc5wjresr6jUoGw/W\n-----END PRIVATE KEY-----\n",
+  "client_email": "prashant-terraform@prashant-terraform.iam.gserviceaccount.com",
+  "client_id": "106121603055874064929",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/prashant-terraform%40prashant-terraform.iam.gserviceaccount.com"
+}
