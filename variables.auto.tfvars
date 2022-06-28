@@ -1,5 +1,5 @@
 credentials        = {
-  {"PRASHANT_CREDS" = "${{ secrets.PRASHANT_CREDS }}"}
+  "PRASHANT_CREDS" = "${{ secrets.PRASHANT_CREDS }}"
 }
 project_id         = "prashant-terraform"
 region             = "us-central1"
