@@ -10,4 +10,4 @@ disk_size_gb       = 25
 service_account    = "prashant-terraform@prashant-terraform.iam.gserviceaccount.com"
 initial_node_count = 3
 repo_name = "prashant-demo"
-repo_owner = "psk24091988"
+
