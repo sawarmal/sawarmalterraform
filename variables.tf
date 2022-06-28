@@ -7,6 +7,10 @@ variable "region" {
   type        = string
   description = "The region to create the cluster."
 }
+variable "creds" {
+  type        = string
+  description = "The region to create the cluster."
+}
 
 variable "zones" {
   type        = list(string)
