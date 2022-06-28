@@ -1,8 +1,8 @@
-credentials        = "./prashant-terraform-5623c2572789.json"
+credentials        = "${{ secrets.prashant_creds}}"
 project_id         = "prashant-terraform"
 region             = "us-central1"
 zones              = ["<region>-a", "<region>-b", "<region>-c"]
-name               = "gke-cluster"
+name               = "prashant-gke"
 machine_type       = "g1-small"
 min_count          = 3
 max_count          = 5
