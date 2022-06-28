@@ -6,7 +6,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket = "prashant-terra-buck"
+    bucket = "sawarmalbucket"
     prefix = "terraform/state"
   }
 }
