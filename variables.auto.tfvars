@@ -1,4 +1,4 @@
-credentials        = "${{ secrets.PRASHANT_CREDS }}"
+credentials        = "=${{ secrets.PRASHANT_CREDS }}"
 project_id         = "prashant-terraform"
 region             = "us-central1"
 zones              = ["<region>-a", "<region>-b", "<region>-c"]
