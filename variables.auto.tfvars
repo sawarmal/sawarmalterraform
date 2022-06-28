@@ -7,7 +7,7 @@ min_count          = 3
 max_count          = 5
 disk_size_gb       = 25
 service_account    = "844689686294-compute@developer.gserviceaccount.com"
-creds = "./prashant-terraform-209ac1c0b8e8.json"
+creds = "./august-shield-345908-1bc0fb7b3c60.json"
 initial_node_count = 3
-repo_name = "prashant-demo"
+repo_name = "sawarmalterraform"
 
