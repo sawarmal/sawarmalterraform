@@ -1,5 +1,5 @@
 credentials        = {
-  "PRASHANT_CREDS" = "${{ https://github.com/psk24091988/prashant-demo/secrets.PRASHANT_CREDS }}"
+  "PRASHANT_CREDS" = "${{ secrets.PRASHANT_CREDS }}"
   }
 project_id         = "prashant-terraform"
 region             = "us-central1"
