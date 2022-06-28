@@ -6,7 +6,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket = "myvik-tf-state-prod"
+    bucket = "prashant-terra-buck"
     prefix = "terraform/state"
   }
 }
