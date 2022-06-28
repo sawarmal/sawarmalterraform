@@ -1,6 +1,6 @@
 project_id         = "prashant-terraform"
 region             = "us-central1"
-zones              = ["<region>-a", "<region>-b", "<region>-c"]
+zones              = ["us-central1-a","us-central1-b","us-central1-c"]
 name               = "prashant-gke"
 machine_type       = "g1-small"
 min_count          = 3
