@@ -9,6 +9,5 @@ max_count          = 5
 disk_size_gb       = 25
 service_account    = "prashant-terraform@prashant-terraform.iam.gserviceaccount.com"
 initial_node_count = 3
-repo_url = "https://github.com/psk24091988/prashant-demo"
 repo_name = "prashant-demo"
 repo_owner = "psk24091988"
